@@ -18,6 +18,9 @@ import java.util.List;
 import com.avaje.ebean.*;
 import static play.mvc.Http.MultipartFormData;
 
+import securesocial.core.java.SecureSocial;
+
+
 @Security.Authenticated(Secured.class)
 @With(CatchAction.class)
 public class Products extends Controller {
@@ -33,6 +36,7 @@ public class Products extends Controller {
     return ok(views.html.catalog.render(products));
   }
 
+  @SecureSocial.SecuredAction
   public static Result newProduct() {
     return ok(details.render(productForm));
   }

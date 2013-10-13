@@ -21,7 +21,7 @@ public class Global extends GlobalSettings {
    @Override
     public <T extends EssentialFilter> Class<T>[] filters() {
       //Class[] filters={CSRFFilter.class,BasicAuthenticationFilter.class};
-      Class[] filters={CSRFFilter.class};
+      Class[] filters={};
       return filters;
     }
     
